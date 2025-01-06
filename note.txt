@@ -66,3 +66,10 @@ fastapi reads env file (env file points to db service in docker-compose)
 postgresql has db service in docker-compose with environment variables set.
 > docker build .
 > docker-compoes up
+
+
+009:
+adding network, why?
+apparently even if you don't define a newtork, docker-compose automatically will create a network with generated name.
+i suppose as the project gets more complicated, the need to have greater control over their communication raises the need to manually define docker networks.
+(but maybe i'm wrong.)
