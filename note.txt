@@ -53,3 +53,9 @@ update 005 2:
 using docker-compose
 > docker build .
 > docker-compoes up
+
+
+
+006:
+moved main.py to dedicated folder (no __init__.py)
+using docker-compose
