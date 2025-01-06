@@ -5,12 +5,10 @@ from typing import AsyncGenerator
 from sqlalchemy.orm import sessionmaker
 
 
-from source.config import Config
+from source.configs.settings import Config
 
 
-async_engine = AsyncEngine(
-    create_engine(url=Config.DB_URL)
-)
+async_engine = AsyncEngine(create_engine(url=Config.DB_URL))
 
 
 async def init_db():
@@ -20,14 +18,8 @@ async def init_db():
         print(result.all())
 
 
-
-
 async def get_async_session() -> AsyncGenerator[AsyncSession, None]:
-    Session = sessionmaker(
-        bind=async_engine,
-        class_=AsyncSession,
-        expire_on_commit=False
-    )
+    Session = sessionmaker(bind=async_engine, class_=AsyncSession, expire_on_commit=False)
 
     async with Session() as session:
         try:

@@ -78,3 +78,6 @@ i suppose as the project gets more complicated, the need to have greater control
 010:
 added redis
 everything works fine.
+
+010 2:
+moved config to dedicated folder + some refactoring

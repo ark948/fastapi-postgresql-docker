@@ -4,14 +4,16 @@ from contextlib import asynccontextmanager
 from source.sections.database.provider import init_db, get_async_session
 from source.sections.redis import get_redis
 from sqlalchemy import text
-from source.config import Config
+from source.configs.settings import Config
 
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     await init_db()
+    print("---> [SERVER STARTED] <---")
     yield
+    print("---> [SERVER SHUTDOWN] <---")
 
 
 
@@ -57,9 +59,9 @@ async def test_db_connection(db = Depends(get_async_session)):
 
 @app.post('/test-redis')
 async def test_redis_post(
-    name: Annotated[str, Body(embed=True)], 
-    value: Annotated[str, Body(embed=True)], 
-    redis_client = Depends(get_redis)
+        name: Annotated[str, Body(embed=True)], 
+        value: Annotated[str, Body(embed=True)], 
+        redis_client = Depends(get_redis)
     ):
     try:
         await redis_client.set(name=name, value=value, ex=3600)
