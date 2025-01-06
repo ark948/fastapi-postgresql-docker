@@ -3,6 +3,15 @@ do not change anything. just commit and work on it.
 make it more complicated step by step
 
 
-commands: (this version that works, got it from fastapi official documentation):
+commands: (this version that works, got it from fastapi official documentation): 001
 > docker build -t myimage .
 > docker run -d --name mycontainer -p 80:80 myimage
+
+
+
+
+
+also works, 002:
+(this time using docker-compose)
+> docker build . (gave it no name)
+> docker-compose up
