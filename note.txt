@@ -49,3 +49,7 @@ but had to use 0.0.0.0 in run.py (uvicorn.run)
 and the result was accessible in 127.0.0.1:80
 > docker build -t myimage .
 > docker run --name mycontainer -p 80:80 myimage
+update 005 2:
+using docker-compose
+> docker build .
+> docker-compoes up
