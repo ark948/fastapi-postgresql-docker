@@ -73,3 +73,8 @@ adding network, why?
 apparently even if you don't define a newtork, docker-compose automatically will create a network with generated name.
 i suppose as the project gets more complicated, the need to have greater control over their communication raises the need to manually define docker networks.
 (but maybe i'm wrong.)
+
+
+010:
+added redis
+everything works fine.
