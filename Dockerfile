@@ -23,6 +23,3 @@ RUN pip install -r requirements.txt
 
 # copy project (everything to /app folder)
 COPY . .
-
-
-CMD ["fastapi", "run", "main.py", "--port", "80"]
