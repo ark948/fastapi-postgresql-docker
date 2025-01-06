@@ -6,3 +6,23 @@ services:
     command: python3 backend/run.py
     volumes:
       - .:/data
+    depends_on:
+      - db
+
+  db:
+    image: postgres:13
+
+    environment:
+      POSTGRES_USER: myuser01
+      POSTGRES_DB: api_db
+      POSTGRES_PASSWORD: 1234
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+
+volumes:
+  db-data:

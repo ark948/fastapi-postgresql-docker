@@ -54,3 +54,15 @@ using docker-compose
 007:
 moved source folder to dedicated backend folder
 docker-compose ok
+
+
+
+008:
+was able to read .env file from pydantic_settings from absolute folder
+FINALLY everything works.
+fastapi app in its own container
+postgresql in container.
+fastapi reads env file (env file points to db service in docker-compose)
+postgresql has db service in docker-compose with environment variables set.
+> docker build .
+> docker-compoes up
