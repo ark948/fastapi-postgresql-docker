@@ -23,3 +23,9 @@ RUN pip install -r requirements.txt
 
 # copy project (everything to /app folder)
 COPY . .
+
+
+EXPOSE 80
+
+
+CMD [ "python3" , "run.py"]

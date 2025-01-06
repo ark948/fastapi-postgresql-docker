@@ -36,3 +36,16 @@ tried changing ports to 8000, works ok (003 2)
 trying to add run.py
 this is where things failed.
 even tried specify exposing host on docker run command
+
+
+
+
+
+
+
+005:
+i was able to add run.py to docker eventually
+but had to use 0.0.0.0 in run.py (uvicorn.run)
+and the result was accessible in 127.0.0.1:80
+> docker build -t myimage .
+> docker run --name mycontainer -p 80:80 myimage
