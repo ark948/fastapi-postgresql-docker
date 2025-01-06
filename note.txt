@@ -1,3 +1,8 @@
 this finally worked.
 do not change anything. just commit and work on it.
 make it more complicated step by step
+
+
+commands: (this version that works, got it from fastapi official documentation):
+> docker build -t myimage .
+> docker run -d --name mycontainer -p 80:80 myimage

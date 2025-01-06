@@ -19,3 +19,9 @@ def root():
 @app.get('/test')
 def test():
     return {"message": "test successful"}
+
+
+
+@app.get('/test2')
+def test2():
+    return "Yes this is test 2"
