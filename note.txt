@@ -1,3 +1,6 @@
+the goal is to have less and less parameters on the docker command,
+and move everything (as much as possible) to either Dockerfile or docker-compose file, or even runserver.py
+
 this finally worked.
 do not change anything. just commit and work on it.
 make it more complicated step by step
@@ -26,3 +29,10 @@ same command as 002, only docker-compose has been changed.
 also 127.0.0.1:80 as good as localhost:80
 tried changing ports to 8000, works ok (003 2)
 
+
+
+
+004:
+trying to add run.py
+this is where things failed.
+even tried specify exposing host on docker run command

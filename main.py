@@ -31,3 +31,9 @@ def test2():
 @app.get('/test3')
 def test3():
     return "test 3"
+
+
+
+@app.get('/test4')
+def test4():
+    return "test 4"
