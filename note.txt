@@ -12,6 +12,10 @@ commands: (this version that works, got it from fastapi official documentation):
 
 
 also works, 002:
-(this time using docker-compose)
+(this time using docker-compose, did not provide any port parameter on command, only in docker-compose)
 > docker build . (gave it no name)
 > docker-compose up
+
+
+
+
