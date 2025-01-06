@@ -12,14 +12,11 @@ commands: (this version that works, got it from fastapi official documentation):
 
 
 
-
-
 also works, 002:
 (this time using docker-compose, did not provide any port parameter on command, only in docker-compose)
 > docker build . (gave it no name)
 > docker-compose up
 (since using docker-compose no longer need to use cmd command in Dockerfile)
-
 
 
 
@@ -30,17 +27,10 @@ also 127.0.0.1:80 as good as localhost:80
 tried changing ports to 8000, works ok (003 2)
 
 
-
-
 004:
 trying to add run.py
 this is where things failed.
 even tried specify exposing host on docker run command
-
-
-
-
-
 
 
 005:
@@ -59,3 +49,8 @@ using docker-compose
 006:
 moved main.py to dedicated folder (no __init__.py)
 using docker-compose
+
+
+007:
+moved source folder to dedicated backend folder
+docker-compose ok

@@ -3,6 +3,6 @@ services:
     build: .
     ports:
       - "80:80"
-    command: python3 run.py
+    command: python3 backend/run.py
     volumes:
       - .:/data
