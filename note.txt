@@ -19,3 +19,8 @@ also works, 002:
 
 
 
+
+003:
+using uvicorn,
+same command as 002, only docker-compose has been changed.
+also 127.0.0.1:80 as good as localhost:80

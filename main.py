@@ -25,3 +25,9 @@ def test():
 @app.get('/test2')
 def test2():
     return "Yes this is test 2"
+
+
+
+@app.get('/test3')
+def test3():
+    return "test 3"
