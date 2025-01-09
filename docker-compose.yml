@@ -7,7 +7,7 @@ services:
       DB_URL: ${DB_URL}
       SECRET_KEY: ${SECRET_KEY}
       REDIS_URL: ${REDIS_URL}
-    command: uvicorn backend.main:app --host 0.0.0.0 --port 80
+    command: bash -c "cd backend && alembic upgrade head && cd .. && uvicorn backend.main:app --host 0.0.0.0 --port 80"
     volumes:
       - .:/data
     depends_on:

@@ -95,3 +95,8 @@ using the following commands:
 > docker-compose exec -it web bash (to enter the container using bash shell)
 > cd backend
 > alembic upgrade head (migration file must exist - i now realize in order to make the migrations PostgreSQL local installation may be required. will test this)
+
+
+
+012:
+Added alembic upgrade command to docker-compose using bash shell script
