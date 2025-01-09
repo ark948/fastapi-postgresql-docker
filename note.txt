@@ -81,3 +81,17 @@ everything works fine.
 
 010 2:
 moved config to dedicated folder + some refactoring
+
+
+011:
+adding alembic (IMPORTANT)
+VERY IMPORTANT NOTES:
+Had to completely uninstall PostgreSQL 16 from my local machine
+(after some research, some people had suggested it) it worked and now everything works perfectly.
+But after bringing up the containers, have to manually enter the web container and run migrations.
+using the following commands:
+> docker build . (to build the image)
+> docker-compose up (to start the containers)
+> docker-compose exec -it web bash (to enter the container using bash shell)
+> cd backend
+> alembic upgrade head (migration file must exist - i now realize in order to make the migrations PostgreSQL local installation may be required. will test this)

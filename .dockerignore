@@ -11,8 +11,6 @@
 *.pyc
 
 
-env/
-.env
 .venv/
 venv/
 

@@ -5,10 +5,10 @@ from typing import AsyncGenerator
 from sqlalchemy.orm import sessionmaker
 
 
-from source.configs.settings import Config
+from backend.config import settings
 
 
-async_engine = AsyncEngine(create_engine(url=Config.DB_URL))
+async_engine = AsyncEngine(create_engine(url=settings.DB_URL))
 
 
 async def init_db():

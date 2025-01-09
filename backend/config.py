@@ -6,9 +6,9 @@ class Settings(BaseSettings):
     REDIS_URL: str
 
     model_config = SettingsConfigDict(
-        env_file="backend/.env",
+        env_file=".env",
         extra="ignore"
     )
 
 
-Config = Settings()
+settings = Settings()

@@ -1,10 +1,10 @@
 from typing import Annotated
 from fastapi import FastAPI, Depends, Body
 from contextlib import asynccontextmanager
-from source.sections.database.provider import init_db, get_async_session
-from source.sections.redis import get_redis
+from backend.database.provider import init_db, get_async_session
+from backend.cache.redis import get_redis
 from sqlalchemy import text
-from source.configs.settings import Config
+from backend.config import settings
 
 
 
@@ -23,6 +23,9 @@ app = FastAPI(
 )
 
 
+from backend.user import router as user_router
+app.include_router(user_router)
+
 
 
 @app.get('')
@@ -40,7 +43,7 @@ def test():
 
 @app.get('/read-env')
 def read_env():
-    return Config.SECRET_KEY
+    return settings.SECRET_KEY
 
 
 
